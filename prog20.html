@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>File Upload Example</title>
+    <style>
+        .invalid-file {
+            width: 200px;
+            height: 30px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            display: none;
+            margin: 10px;
+            border-radius: 5px;
+            padding: 2px;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            border: 1px solid rgb(142, 142, 255);
+            width: 300px;
+            background-color: beige;
+        }
+        
+        input {
+            margin: 10px;
+            width: 200px;
+        }
+        
+        h1 {
+            margin-left: 10px;
+        }
+    </style>
+    <script>
+        function checkFileExtension() {
+            var fileInput = document.getElementById('fileToUpload');
+            var file = fileInput.files[0];
+            var fileExtension = file.name.split('.').pop().toLowerCase();
+            var allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+            if (!allowedExtensions.includes(fileExtension)) {
+                var invalidFileDiv = document.getElementById('invalidFile');
+                invalidFileDiv.style.display = 'block';
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="prog20.php" method="POST" enctype="multipart/form-data">
+        <h1>File Upload</h1>
+        <input type="file" id="fileToUpload" name="fileToUpload">
+        <input type="submit" value="Upload" onclick="return checkFileExtension()">
+        <div id="invalidFile" class="invalid-file">
+            Invalid file extension.
+        </div>
+    </form>
+</body>
+
+</html>

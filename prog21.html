@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact me form</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        
+        #new {
+            color: #9925be;
+            font-weight: bold;
+            font-size: 40px;
+        }
+        
+        table {
+            width: 500px;
+        }
+        
+        td:nth-child(even) {
+            width: 200px;
+        }
+        
+        input,
+        textarea {
+            border: 1px solid rgba(0, 0, 0, 0.419);
+            margin: 5px;
+            padding: 5px 0px;
+            margin-left: 10px;
+            border-radius: 3px;
+        }
+        
+        button {
+            width: 150px;
+            margin: 0px 10px;
+            padding: 5px 0px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.419);
+            color: rgba(0, 0, 0, 0.758);
+        }
+        
+        button:hover {
+            width: 150px;
+            margin: 0px 10px;
+            padding: 5px 0px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.419);
+            background-color: rgba(96, 97, 98, 0.622);
+            font-weight: 500;
+            color: black;
+        }
+    </style>
+</head>
+
+<body style=" background-color : #ffff99 ; color: #9925be;">
+    <div id="container">
+        <center id="new">Sign Up</center>
+        <form name="myform" action="prog21.php" method="post">
+            <table>
+                <tr>
+                    <td><label for="fname">First Name:</label></td>
+                    <td><input type="text" name="fname" id="fname" required placeholder="Enter your Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="mname">Middle Name:</label></td>
+                    <td><input type="text" name="mname" id="mname" required placeholder="Enter your Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Last Name:</label></td>
+                    <td><input type="text" name="lname" id="lname" required placeholder="Enter your Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="pass">Password:</label></td>
+                    <td><input type="password" name="pass" id="pass" required placeholder="Enter your Password"></td>
+                </tr>
+                <tr>
+                    <td><label for="cpass">Confirm Password:</label></td>
+                    <td><input type="password" name="cpass" id="cpass" required placeholder="ReEnter your Password"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" name="email" id="email" required placeholder="Enter your Email"></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender: </label></td>
+                    <td><input type="radio" name="gender" id="gender" value="male">Male
+                        <input type="radio" name="gender" id="gender" value="female">Female</td>
+                </tr>
+                <tr>
+                    <td><label for="num">Contact-NO:</label></td>
+                    <td><input type="tel" name="num" id="num" required placeholder="Enter your Number"></td>
+                </tr>
+                <tr>
+                    <td><label for="addr">Address:</label></td>
+                    <td><textarea type="text" name="addr" id="addr" rows="4" cols="25"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="pin">Pin-Code:</label></td>
+                    <td><input type="text" name="pin" id="pin"></td>
+                </tr>
+                <tr>
+                    <td><label for="city">City:</label></td>
+                    <td><input type="text" name="city" id="city"></td>
+                </tr>
+                <tr>
+                    <td><label for="con">Country:</label></td>
+                    <td><input type="text" name="con" id="con"></td>
+                </tr>
+                <tr>
+                    <td><label for="skill">skills:</label> </td>
+                    <td><input type="radio" name="skill" id="skill" value="java">JAVA
+                        <input type="radio" name="skill" id="skill" value="cpp">C++</td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="radio" name="term" id="term" required>I have read terms and conditions.</td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button id="btn" type="submit">Submit</button><button id="btn" type="reset">reset</button></td>
+                </tr>
+
+            </table>
+    </div>
+</body>
+
+</html>

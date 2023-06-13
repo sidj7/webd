@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+        }
+        
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        td {
+            width: 250px;
+        }
+        
+        p {
+            margin-left: 10px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgb(255, 194, 114);
+        }
+        
+        tr:nth-child(odd) {
+            background-color: rgb(236, 207, 153);
+        }
+        
+        button {
+            margin: 10px 0px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.19);
+        }
+        
+        button:hover {
+            margin: 10px 0px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: rgb(133, 140, 146);
+            color: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+        
+        input {
+            padding: 5px 0px;
+            width: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form method="post" action="bill.php">
+            <table cellspacing="0">
+                <tr>
+                    <td colspan="2" align="center">
+                        <h1>ELECTRICITY BILL</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>enter the consumer number</p>
+                    </td>
+                    <td><input name="cno" type="text"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>enter the customer name</p>
+                    </td>
+                    <td><input name="cname" type="text"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>enter the previous reading</p>
+                    </td>
+                    <td><input name="prev" type="text"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>enter the present reading</p>
+                    </td>
+                    <td><input name="pres" type="text"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="submit" value="calc-bill">generate bill</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
